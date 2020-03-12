@@ -1,6 +1,6 @@
-# Angular/TypeScript/NgRx Regions App
+# Regions App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
+This project is built with Angular / TypeScript / NgRx, and generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 
 ## To run the app
 
