@@ -1,0 +1,7 @@
+<app-regions 
+  [regions]="regions$ | async" 
+  [countries]="countries$ | async" 
+  (changeCountries)="onChangeCountries($event)" 
+  (changeRegions)="onChangeRegions($event)"
+  (resetSelectedCountry)="onResetSelectedCountry()">
+</app-regions>

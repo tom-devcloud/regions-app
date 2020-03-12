@@ -1,0 +1,23 @@
+@import '../assets/styles/main';
+
+.page-container {
+  height: 100vh;
+  background-color: $pageBg;
+  padding: 40px 20px;
+}
+
+.demo {
+  @include horizontal-center;
+  @include section-container;
+  max-width: 570px;
+  min-height: 667px;
+}
+
+@media only screen and (max-width: $mediaQuerySm) {
+  .title {
+    @include font-size(2.2);
+  }
+  .demo {
+    padding: 18px;
+  }
+}

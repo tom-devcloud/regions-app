@@ -1,0 +1,109 @@
+/* Master Styles */
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  @include font-size(2.6);
+  padding-top: 10px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+body {
+  @include font-size(1.3);
+  @include primary-font;
+  color: $content;
+}
+
+p {
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+button {
+  @include font-size(1.3);
+  @include rounded(4px);
+  @include transition();
+  color: $lightContent;
+  background-color: $buttonBg;
+  border: none;
+  padding: 0px 14px 2px;
+  height: 28px;
+  cursor: pointer;
+}
+
+button:hover {
+  @include transition();
+  background-color: $buttonBgHover;
+  color: $lightContent;
+}
+
+button:disabled {
+  background-color: $inactive;
+  color: $lightContent;
+  cursor: auto;
+}
+
+select {
+  @include font-size(1.2);
+  border: 1px solid $border;
+  border-radius: 5px;
+  color: $content;
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  appearance: none;   
+  padding: 5px 40px 6px 10px;
+  position: relative;
+  background-color: $lightBg;
+  cursor: pointer;
+  height: 28px;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 13px) calc(1em + -1px), 
+    calc(100% - 8px) calc(1em + -1px), 
+    calc(100% - 2.2em) 0.3em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select:disabled {
+  color: $inactive;
+}
+
+@media only screen and (max-width: $mediaQuerySm) {
+
+  select {
+    @include font-size(1.4);
+    border: 1px solid $border;
+    border-radius: 4px;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;   
+    padding: 4px 50px 5px 10px;
+    position: relative;
+    background-color: $lightBg;
+    cursor: pointer;
+
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 14px) calc(1em + -4px), 
+      calc(100% - 9px) calc(1em + -4px), 
+      calc(100% - 1.9em) 0.26em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.2em;
+    background-repeat: no-repeat;
+  }
+}

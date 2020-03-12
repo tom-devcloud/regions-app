@@ -1,0 +1,20 @@
+<div class="regions">
+  <form>
+    <app-select 
+      [controlId]="'regions'"
+      [controlName]="'regions'"
+      [label]="'Region'"
+      [options]="regions" 
+      (selectedOption)="onRegionsSelect($event)">
+    </app-select>
+    <app-select 
+      [controlId]="'countries'"
+      [controlName]="'countries'"
+      [label]="'Country'"
+      [disabled]="!hasCountries"
+      [options]="mappedCountries" 
+      (selectedOption)="onCountriesSelect($event)">
+    </app-select>
+    <button (click)="onLoadCountryDetails()" [disabled]="!countryDetails">Load details</button>
+  </form>
+</div>

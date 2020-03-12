@@ -1,0 +1,34 @@
+@import '../../../../assets/styles/main';
+
+.country-table {
+  width: 100%;
+  border-left: 1px solid $border;
+  border-bottom: 1px solid $border;
+
+  caption {
+    @include font-size(1.4);
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  tr {
+    border: 1px solid $border;
+    
+    th, td {
+      padding: 12px;
+      border-top: 1px solid $border;
+      border-right: 1px solid $border;
+      vertical-align: top;
+      line-height: 1.4;
+    }
+
+    th {
+      width: 110px;
+      font-weight: 700;
+    }
+  }
+
+  &__flag {
+    border: 1px solid $flagBorder;
+  }
+}

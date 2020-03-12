@@ -1,0 +1,26 @@
+@import '../../../../assets/styles/main';
+
+.custom-select {
+  margin-bottom: 20px;
+
+  &__label {
+    margin-bottom: 10px;
+    font-weight: 700;
+
+    &--disabled {
+      color: $inactive;
+    }
+  }
+}
+
+@media only screen and (max-width: $mediaQuerySm) {
+  
+  // Limit dropdown width in mobile view
+  select {
+    max-width: 240px;
+  }
+
+  .custom-select__label {
+    @include font-size(1.5);
+  }
+}

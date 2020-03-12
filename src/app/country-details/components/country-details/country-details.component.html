@@ -1,0 +1,23 @@
+<table class="country-table" *ngIf="countryDetails">
+  <caption>Country details</caption>
+  <tr>
+    <th>Name</th>
+    <td>{{ countryDetails.name }}</td>
+  </tr>
+  <tr>
+    <th>Capital</th>
+    <td>{{ countryDetails.capital }}</td>
+  </tr>
+  <tr>
+    <th>Population</th>
+    <td>{{ countryDetails.population | number: '1.0-0' }}</td>
+  </tr>
+  <tr>
+    <th>Currencies</th>
+    <td><div *ngFor="let item of countryDetails.currencies;">{{ item.code }} / {{ item.name }} / {{ item.symbol }}</div></td>
+  </tr>
+  <tr>
+    <th>Flag</th>
+    <td><img class="country-table__flag" src="{{ countryDetails.flag }}" alt="" width="100"></td>
+  </tr>
+</table>

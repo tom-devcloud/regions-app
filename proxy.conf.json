@@ -1,0 +1,8 @@
+{
+  "/region/*": {
+    "target": "https://restcountries.eu/rest/v2",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

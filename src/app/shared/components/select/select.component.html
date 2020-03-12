@@ -1,0 +1,7 @@
+<div class="custom-select">
+  <div class="custom-select__label" [ngClass]="{'custom-select__label--disabled':disabled}"><label for="{{ controlId }}">{{ label }}</label></div>
+  <select name="{{ controlName }}" id="{{ controlId }}" (change)="optionSelect($event.target.value)" [disabled]="disabled">
+    <option value="" hidden>- Please select -</option>
+    <option value="{{ option.value }}" *ngFor="let option of options; let i = index">{{ option.label }}</option>
+  </select>
+</div>
